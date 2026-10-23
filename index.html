@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b1b">
+  <meta name="description" content="A futuristic, mobile-friendly AI Agent dashboard demo.">
+  <title>Nova AI — Your Personal Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span> NOVA<span class="brand-light">AI</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a><a href="#features">Features</a><a href="#workspace">Workspace</a>
+    </nav>
+    <a class="button button-small" href="#workspace">Launch agent ↗</a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> PERSONAL AI WORKSPACE</div>
+        <h1>Your ideas.<br>Supercharged by <span class="gradient-text">AI.</span></h1>
+        <p class="hero-sub">A futuristic home for brainstorming, content planning, reminders, and your next big idea.</p>
+        <div class="hero-actions">
+          <a class="button" href="#workspace">Try the demo <span>→</span></a>
+          <a class="text-link" href="#features">Explore features ↓</a>
+        </div>
+        <div class="mini-stats"><div><strong>01</strong><span>Think</span></div><i></i><div><strong>02</strong><span>Create</span></div><i></i><div><strong>03</strong><span>Organize</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Animated futuristic AI orb">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="orb"><div class="orb-core"><span>✦</span></div></div>
+        <div class="float-card card-top"><span class="tiny-icon">◈</span><div><b>AI core online</b><small>Ready for your ideas</small></div><span class="status-dot"></span></div>
+        <div class="float-card card-bottom"><span class="tiny-icon purple">⌁</span><div><b>Creative mode</b><small>Ideas into action</small></div></div>
+        <div class="visual-caption">NOVA / PERSONAL INTELLIGENCE</div>
+      </div>
+    </section>
+
+    <section class="section-wrap features-section" id="features">
+      <div class="section-heading"><div><div class="eyebrow">ONE SPACE. MANY POSSIBILITIES.</div><h2>Your AI toolkit</h2></div><p>Choose a tool to load a starter prompt into the workspace.</p></div>
+      <div class="feature-grid">
+        <button class="feature-card" data-prompt="Give me 5 creative ideas for a project I can start this week."><span class="feature-icon blue">✧</span><b>AI Chat & Brain</b><span>Think through questions and brainstorm ideas.</span><em>Open tool ↗</em></button>
+        <button class="feature-card" data-prompt="Write a short, engaging social media post introducing my new project."><span class="feature-icon pink">✎</span><b>Content studio</b><span>Draft posts, scripts, captions, and concepts.</span><em>Open tool ↗</em></button>
+        <button class="feature-card" data-prompt="Help me plan a balanced schedule for tomorrow."><span class="feature-icon violet">▦</span><b>Daily planner</b><span>Organize tasks and make a simple plan.</span><em>Open tool ↗</em></button>
+        <button class="feature-card" data-prompt="Draft a friendly professional email asking for more information."><span class="feature-icon cyan">✉</span><b>Email assistant</b><span>Start clear emails and newsletter drafts.</span><em>Open tool ↗</em></button>
+        <button class="feature-card" data-prompt="Create a 7-day social media content calendar for a small creator."><span class="feature-icon orange">◷</span><b>Social planner</b><span>Map out content ideas for the week.</span><em>Open tool ↗</em></button>
+        <button class="feature-card" data-prompt="Suggest 3 useful metrics I could track for my online project."><span class="feature-icon green">⌁</span><b>Insights & growth</b><span>Choose simple metrics to track progress.</span><em>Open tool ↗</em></button>
+      </div>
+    </section>
+
+    <section class="section-wrap workspace-section" id="workspace">
+      <div class="section-heading"><div><div class="eyebrow">YOUR INTERACTIVE DEMO</div><h2>Meet your workspace</h2></div><span class="demo-pill"><span class="status-dot"></span> Demo mode</span></div>
+      <div class="workspace">
+        <aside class="side-panel">
+          <div class="side-title"><span class="brand-mark small-mark">✦</span><div><b>Nova assistant</b><small>Personal workspace</small></div></div>
+          <div class="side-label">QUICK START</div>
+          <button class="quick-prompt" data-prompt="Give me 5 creative ideas for a project I can start this week.">✧ <span>Brainstorm ideas</span></button>
+          <button class="quick-prompt" data-prompt="Write a short social media caption about learning something new.">✎ <span>Write a caption</span></button>
+          <button class="quick-prompt" data-prompt="Help me make a checklist for today.">☑ <span>Plan my day</span></button>
+          <div class="side-note"><span>✦</span><p>This demo replies with local sample logic. Connect an AI API to enable real AI answers.</p></div>
+        </aside>
+        <div class="chat-panel">
+          <div class="chat-header"><div><b>AI chat</b><small>Ask, create, organize</small></div><span class="online-label"><span class="status-dot"></span> Online demo</span></div>
+          <div class="chat-messages" id="chatMessages" aria-live="polite">
+            <div class="message assistant"><div class="avatar">✦</div><div><small>Nova · now</small><p>Hey there! ✨ I'm your AI workspace demo. Pick a starter idea or type a message below. What would you like to create today?</p></div></div>
+          </div>
+          <div class="suggestions"><button data-prompt="Give me a business idea">Business idea</button><button data-prompt="Write a video script">Video script</button><button data-prompt="Plan my day">Plan my day</button></div>
+          <form class="chat-form" id="chatForm"><input id="userInput" autocomplete="off" placeholder="Message Nova..." aria-label="Message Nova"><button aria-label="Send message" type="submit">➤</button></form>
+          <div class="chat-foot">Demo interface · No message is sent to a server</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap reminder-section">
+      <div><div class="eyebrow">STAY ON TRACK</div><h2>A small step, every day.</h2><p>Add a reminder to this demo list. It stays in this browser on this device.</p></div>
+      <form id="reminderForm" class="reminder-form"><input id="reminderInput" placeholder="e.g. Draft my first video" aria-label="Reminder text" required><button class="button" type="submit">Add reminder +</button></form>
+      <ul id="reminderList" class="reminder-list"><li class="empty-reminders">Your reminders will appear here.</li></ul>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">✦</span> NOVA<span class="brand-light">AI</span></a><span>Built for ideas in motion.</span><a href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
